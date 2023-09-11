@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 2_Bomb
   m_EditorClassIdentifier: 
   Id: 2
-  Cost: 1000
+  Cost: 0
   Sprite: {fileID: 21300000, guid: 8c649291299fcc9439c39788d0ca6744, type: 3}
