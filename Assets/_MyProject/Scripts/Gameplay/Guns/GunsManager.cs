@@ -10,7 +10,7 @@ public class GunsManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] clipDisplay;
     [SerializeField] AmmoDisplayHandler ammoDisplayHandler;
     [SerializeField] Transform gunHolder;
-    [SerializeField] Renderer hatRenderer;
+    [SerializeField] SpriteRenderer weaponImage;
 
     List<GunController> gunControllers = new List<GunController>();
 
@@ -100,14 +100,7 @@ public class GunsManager : MonoBehaviour
 
         string hueKey = "_Hue";
        
-        hatSequence = DOTween.Sequence();
-        float _currentColor = hatRenderer.material.GetFloat(hueKey);
-        float _endColor = selectedGun.GunSO.HatColor;
-        float _duration = 0.5f;
-        hatSequence.Append(DOTween.To(() => _currentColor, x => _currentColor = x, _endColor, _duration).OnUpdate(() => 
-        {
-            hatRenderer.material.SetFloat(hueKey, selectedGun.GunSO.HatColor);
-        }));
+        weaponImage.sprite = GunSO.Get(DataManager.Instance.PlayerData.SelectedGuns[_index]).Sprite;
 
         hatSequence.Play();
         //weaponImage.sprite = GunSO.Get(DataManager.Instance.PlayerData.SelectedGuns[_index]).Sprite;
@@ -165,12 +158,15 @@ public class GunsManager : MonoBehaviour
         {
             selectedGun.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
-        else if (selectedGun.HoldToFire)
+        else if (selectedGun.HoldToFire&&Input.GetMouseButton(0))
         {
-            if (Input.GetMouseButton(0))
-            {
-                selectedGun.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            }
+            selectedGun.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
+        else
+        {
+            return;
+        }
+        
+        AudioManager.Instance.PlaySoundEffect(selectedGun.GunSO.Sound);
     }
 }

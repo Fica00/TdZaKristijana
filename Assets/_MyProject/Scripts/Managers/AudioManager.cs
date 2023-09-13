@@ -75,6 +75,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySoundEffect(AudioClip _audio)
+    {
+        if (_audio==null)
+        {
+            UIManager.Instance.OkDialog.Show("Zaboravio si da postavis zvuk za ovaj weapon");
+            return;
+        }
+        if (DataManager.Instance.PlayerData.PlaySoundEffect)
+        {
+            audioSource.PlayOneShot(_audio);
+        }
+    }
+
     public void PlayRandomHitNoise()
     {
         int _random = Random.Range(0, 5);

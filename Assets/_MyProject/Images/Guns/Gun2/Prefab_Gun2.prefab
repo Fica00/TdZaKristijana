@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e461f3618afea934c8940c1d5b1c48f0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,6 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: db99afebb583b1c49951040b93f27799, type: 2}
-  bullet: {fileID: 1028206493973864929, guid: c2a1103be2ec174409d3b6424f32364b, type: 3}
+  bullet: {fileID: 1028206493973864929, guid: dda04e8e05e62cc4bb68f7af06dec4bc, type: 3}
   shootPoint: {fileID: 3504099082052259487}
   <HoldToFire>k__BackingField: 1

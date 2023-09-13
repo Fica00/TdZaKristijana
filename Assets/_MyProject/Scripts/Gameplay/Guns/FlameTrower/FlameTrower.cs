@@ -41,7 +41,6 @@ public class FlameTrower : GunController
             CurrentGunShotsAmount = 0;
             Reload();
         }
-        AudioManager.Instance.PlaySoundEffect(AudioManager.HIT);
     }
 
     protected override IEnumerator ReloadRoutine()

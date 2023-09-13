@@ -24,7 +24,6 @@ public class MGK : GunController
             return;
         }
         Fired?.Invoke();
-        AudioManager.Instance.PlaySoundEffect(AudioManager.HIT);
         for (int i = 0; i < amountOfBulletsToShoot; i++)
         {
             GameObject _bullet = Instantiate(bullet, shootPoint);

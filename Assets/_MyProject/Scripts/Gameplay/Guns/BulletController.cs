@@ -18,7 +18,7 @@ public class BulletController : MonoBehaviour
             return;
         }
 
-        AudioManager.Instance.PlaySoundEffect(AudioManager.PROJECTILE);
+        // AudioManager.Instance.PlaySoundEffect(AudioManager.PROJECTILE);
         GameObject _effect = Instantiate(fireEffect);
         _effect.transform.position = transform.position + fireEffectOffset;
     }

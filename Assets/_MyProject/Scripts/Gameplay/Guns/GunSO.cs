@@ -22,6 +22,7 @@ public class GunSO : ScriptableObject
     [field: SerializeField] public List<float> Upgrade2Cost { get; private set; }
     [field: SerializeField] public int UnclockCost { get; private set; }
     [field: SerializeField] public int Spread { get; private set; }
+    [field: SerializeField] public AudioClip Sound { get; private set; }
 
     protected bool canFire;
 

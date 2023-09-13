@@ -12,23 +12,15 @@ public class LevelSelectionDisplay : MonoBehaviour
     [SerializeField] TextMeshProUGUI goldDisplay;
 
     [SerializeField] Button goHomeButton;
-    [SerializeField] Button goShopButton;
 
     private void OnEnable()
     {
-        goShopButton.onClick.AddListener(GoShop);
         goHomeButton.onClick.AddListener(GoHome);
     }
 
     private void OnDisable()
     {
-        goShopButton.onClick.RemoveListener(GoShop);
         goHomeButton.onClick.RemoveListener(GoHome);
-    }
-
-    void GoShop()
-    {
-        SceneManager.LoadShop();
     }
 
     void GoHome()

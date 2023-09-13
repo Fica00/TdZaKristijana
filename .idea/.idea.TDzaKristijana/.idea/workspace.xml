@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
+  <component name="ChangeListManager">
+    <list default="true" id="9ce7acf8-5038-473a-a414-2f32baa07ed7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDzaKristijana/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TDzaKristijana/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun1/Prefab_Gun1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun1/Prefab_Gun1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun2/Prefab_Gun2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun2/Prefab_Gun2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun3/Prefab_Gun3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun3/Prefab_Gun3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Player/Animations/Alien/Idle Hat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Player/Animations/Alien/Idle Hat.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Bazooka.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Bazooka.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Bow/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Bow/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/BulletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/FlameTrower/FlameTrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/FlameTrower/FlameTrower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/MGK/MGK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/MGK/MGK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/RPG/RPG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/RPG/RPG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/Shotgun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelSelection/LevelSelectionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelSelection/LevelSelectionDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Managers/AudioManager.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VKxFUnAIvVxPHCrO3RzdJKNJSw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Unity.exe" />
@@ -35,4 +75,22 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ce7acf8-5038-473a-a414-2f32baa07ed7" name="Changes" comment="" />
+      <created>1694598472536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694598472536</updated>
+      <workItem from="1694598477682" duration="1563000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
 </project>
