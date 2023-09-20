@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9f1bc2d6398f9f4d8c7ccad9072c7ea, type: 3}
-  m_Name: 2_Bazooka
+  m_Name: 2_Kalas
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 2
   <Name>k__BackingField: AK-47
@@ -43,8 +43,8 @@ MonoBehaviour:
   - 0.1
   - 0.1
   <Prefab>k__BackingField: {fileID: 52369988294535472, guid: 502352c155af7d0439c057d18fe9870e, type: 3}
-  <UIPreview>k__BackingField: {fileID: 21300000, guid: a1a514eda33188449a34b2b60a4e119f, type: 3}
-  <Sprite>k__BackingField: {fileID: 21300000, guid: a1a514eda33188449a34b2b60a4e119f, type: 3}
+  <UIPreview>k__BackingField: {fileID: 21300000, guid: 1bcf000d943627144a51bc64c7c70154, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f2061526f3ee6814b97cd6d6a64b7f38, type: 3}
   <Upgrade1Cost>k__BackingField:
   - 400
   - 800
@@ -57,3 +57,4 @@ MonoBehaviour:
   - 2200
   <UnclockCost>k__BackingField: 0
   <Spread>k__BackingField: 1
+  <Sound>k__BackingField: {fileID: 8300000, guid: cf23b3646e25a5e4d922d261c779b510, type: 3}
