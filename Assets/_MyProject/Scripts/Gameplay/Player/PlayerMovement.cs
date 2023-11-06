@@ -1,14 +1,21 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
+using DG.Tweening; // nepotreban using
+using System.Collections;  
+using System.Collections.Generic; // nepotreban using
+using Unity.VisualScripting; // nepotreban using
+using UnityEditor; // nepotreban using
 using UnityEngine;
 
+/*
+ * generalno: gledaj da ne dodajes using statments ako ih ne koristis, gledaj da to bude cisto
+ * Ako nema potrebe da variabla bude public, tj ako je koristis samo u ovoj skripti a hoces da bude vidljiva u editoru iskoristi  [SerializeField]
+ * Ja vise volim explicitno da oznacim da je field private i da svaku variablu zasebno definisem pr: bool isFlipped pa u novom redu bool canRoll..
+ * ja vise volim da sve stavim unutar {} (konkretno mislim kad if ima jednu liniju, petlja u petlji...)
+ * Gledaj da nadjes naming semu koja ti se svidja
+ */
 public class PlayerMovement : MonoBehaviour
 {
-    public float playerSpeed = 1f;
-    public float jumpStrength = 1f;
+    public float playerSpeed = 1f; /*umesto public mozes da stavis [SerializeField], idalje ce biti vidljivo u editoru ali nece biti dostupno ostalim skriptama*/
+    public float jumpStrength = 1f;  /*umesto public mozes da stavis [SerializeField], idalje ce biti vidljivo u editoru ali nece biti dostupno ostalim skriptama*/
     [SerializeField] float rollCoolDownTime;
 
     SpriteRenderer playerSprite;
@@ -19,7 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        playerSprite = GetChildGameObject(gameObject, "Graphics_Player").GetComponent<SpriteRenderer>();
+        /*uzimanje komponenti se po nepisanom pravilu uvek radi u Awake
+         Nikad nije dobrbo da se vezes za stringove, tako da bi ovde bilo bolje da definises
+        promenjive kojima ces moci da prevuces ove komponente koje ti trebaju
+        [SerializeField] private SpriteRenderer graphics; i prevuces iz editora umesto 
+        GetChildGameObject(gameObject, "Graphics_Player").GetComponent<SpriteRenderer>();
+         */
+        playerSprite = GetChildGameObject(gameObject, "Graphics_Player").GetComponent<SpriteRenderer>(); 
         gunPivot = GetChildGameObject(gameObject, "GunPivot").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -67,7 +80,9 @@ public class PlayerMovement : MonoBehaviour
                 canRoll = false;
                 int direction = isFlipped ? -1 : 1;
                 rb.AddForce(Vector3.right * direction * 10, ForceMode2D.Impulse);
-                StartCoroutine("RollCoolDown", rollCoolDownTime);
+                StartCoroutine("RollCoolDown", rollCoolDownTime); /* vezivanje za stringove generalno nije dobra praksa
+                mozes lako da uzmes ime funkcije uz pomoc nameof(funkcija)
+                */
             }
         }
     }
@@ -103,7 +118,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Ground"))
+        if (collision.transform.CompareTag("Ground")) /* vezanje za stringove generalno nije dobra praksa, posebno za "magicne stringove"
+            uvedi konstantu koja ce da ima vrednost Ground
+            */
             isGrounded = true;
 
     }
