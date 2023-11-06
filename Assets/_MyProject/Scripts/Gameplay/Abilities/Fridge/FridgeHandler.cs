@@ -4,7 +4,7 @@ using TMPro;
 
 public class FridgeHandler : MonoBehaviour
 {
-    public static float SpeedMultiplayer = 1;
+    public static float SpeedMultiplier = 1;
 
     [SerializeField] Button handleClick;
     [Range(0f, 0.9f)] [SerializeField] float effect;
@@ -49,7 +49,7 @@ public class FridgeHandler : MonoBehaviour
         cooldwonHolder.SetActive(true);
         screenBlur.SetActive(true);
         isOnCooldwon = true;
-        SpeedMultiplayer = effect;
+        SpeedMultiplier = effect;
         cooldownCounter = cooldown;
         durationCounter = duration;
         AudioManager.Instance.PlaySoundEffect(AudioManager.FREEZE);
@@ -80,7 +80,7 @@ public class FridgeHandler : MonoBehaviour
             if (isActive)
             {
                 isActive = false;
-                SpeedMultiplayer = 1;
+                SpeedMultiplier = 1;
                 screenBlur.SetActive(false);
             }
         }

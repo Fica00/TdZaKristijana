@@ -33,7 +33,7 @@ public class CatingAttack : MonoBehaviour
         {
             myTransform.position = Vector3.MoveTowards(
                  myTransform.position,
-                 _targetPosition, speed * Time.deltaTime * FridgeHandler.SpeedMultiplayer);
+                 _targetPosition, speed * Time.deltaTime * FridgeHandler.SpeedMultiplier);
         }
         else
         {

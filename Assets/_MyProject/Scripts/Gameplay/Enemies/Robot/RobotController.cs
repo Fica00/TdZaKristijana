@@ -40,7 +40,7 @@ public class RobotController : EnemyObject
         {
             myTransform.position = Vector3.MoveTowards(
                  myTransform.position,
-                 _targetPosition, enemySO.MovementSpeed * Time.deltaTime * FridgeHandler.SpeedMultiplayer);
+                 _targetPosition, enemySO.MovementSpeed * Time.deltaTime * FridgeHandler.SpeedMultiplier);
         }
     }
 

@@ -42,4 +42,10 @@ public class EnemyObject : MonoBehaviour
     {
         throw new Exception("Die must be overriden");
     }
+
+    //protected void Flip()
+    //{
+    //    if (transform.position.x - PlayerManager.player.transform.position.x <= 1f)
+    //        print("proso");
+    //}
 }
