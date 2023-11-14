@@ -11,11 +11,12 @@ public class AirplaneObject : MonoBehaviour
 
     bool isFlying = false;
     float spawnCounter = 0;
+
     public void StartFlying()
     {
         isFlying = true;
-        transform.position = startPosition.position;
-        transform.DOMove(endPosition.position, flightDuration).onComplete += () =>
+        transform.position = startPosition.position + PlayerManager.player.transform.position;
+        transform.DOMove(endPosition.position + PlayerManager.player.transform.position, flightDuration).onComplete += () =>
          {
              isFlying = false;
              transform.position = startPosition.position;
@@ -24,6 +25,8 @@ public class AirplaneObject : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //transform.position = startPosition.position;
+
         if (!isFlying)
         {
             return;
@@ -42,7 +45,6 @@ public class AirplaneObject : MonoBehaviour
 
     void SpawnMissle()
     {
-        AirplaneMissle _missle = Instantiate(misslePrefab);
-        _missle.transform.position = transform.position;
+        AirplaneMissle _missle = Instantiate(misslePrefab, transform.position, Quaternion.identity);
     }
 }

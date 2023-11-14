@@ -5,14 +5,14 @@ public class Shotgun : GunController
 {
     float spreed;
 
-    int amountOfBulletsToShoot = 3;
+    int amountOfBulletsToShoot = 1;
     float cooldownCounter = 0;
 
     private void Awake()
     {
-        GunShots = gun.AmountOfBullets[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+        GunShots = gun.AmountOfBullets[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
         spreed = gun.Spread;
-        AmountOfClips = gun.AmountOfClips[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+        AmountOfClips = gun.AmountOfClips[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
 
         CurrentGunShotsAmount = GunShots;
     }
@@ -30,14 +30,42 @@ public class Shotgun : GunController
         {
             GameObject _bullet = Instantiate(bullet);
             _bullet.transform.position = shootPoint.transform.position;
-            _bullet.GetComponent<BulletController>().SetDamage(gun.Bullet.Damage[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)]);
+            _bullet.GetComponent<BulletController>().SetDamage(gun.Bullet.Damage[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)]);
             Vector2 _dir = (_position - transform.position).normalized;
             float _angle = Random.Range(-spreed, spreed);
             _dir = Quaternion.Euler(0, 0, _angle) * _dir;
             _dir = _dir.normalized;
-            _bullet.GetComponent<Rigidbody2D>().velocity = _dir * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+
+            if (PlayerMovement.isFlipped)
+            {
+                if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x <= 0)
+                {
+                    Vector2 flipped = new(_dir.x * -1, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+                }
+                else
+                {
+                    Vector2 flipped = new(_dir.x, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+                }
+            }
+            else
+            {
+                if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x >= 0)
+                {
+                    Vector2 flipped = new(_dir.x * -1, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+                }
+                else
+                {
+                    Vector2 flipped = new(_dir.x, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+                }
+            }
+
         }
-        cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+
+        cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
         CurrentGunShotsAmount--;
         if (CurrentGunShotsAmount == 0)
         {
@@ -48,7 +76,7 @@ public class Shotgun : GunController
     protected override IEnumerator ReloadRoutine()
     {
         Reloading?.Invoke();
-        yield return new WaitForSeconds(gun.ReloadSpeed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)]);
+        yield return new WaitForSeconds(gun.ReloadSpeed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)]);
         CurrentGunShotsAmount = GunShots;
         FinishedReloading?.Invoke();
     }

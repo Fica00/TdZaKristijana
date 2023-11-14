@@ -102,11 +102,6 @@ public class ScienceBoyController : EnemyObject
 
     public override void TakeDamage(float _damage)
     {
-        if (isDead)
-        {
-            fillBarHolder.SetActive(false);
-            return;
-        }
         health -= _damage;
         if (health <= 0)
         {
@@ -119,6 +114,7 @@ public class ScienceBoyController : EnemyObject
         }
         else
         {
+            print("uslo u else");
             fillBarHolder.SetActive(true);
             DOTween.To(() => fillBar.fillAmount, x => fillBar.fillAmount = x, health / maxHealth, 1.0f).onComplete += () => { fillBarHolder.SetActive(false); };
         }

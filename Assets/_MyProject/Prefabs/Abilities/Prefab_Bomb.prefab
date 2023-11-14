@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1584022267369867066
@@ -147,14 +147,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16cb57d637690fa418ec84843e946a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
-  damage: 10
+  range: 2
+  damage: 2
   explosionEffect: {fileID: 6334791310591319574, guid: 091076f60323dfb48a03f729813f662b, type: 3}
 --- !u!1001 &1427143632952026200
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1584022267369867069}
     m_Modifications:
     - target: {fileID: 1036135712148546262, guid: fb3ef5098f380d245a5e0c897d1da57e, type: 3}
@@ -206,6 +207,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3ef5098f380d245a5e0c897d1da57e, type: 3}
 --- !u!4 &953113825310655382 stripped
 Transform:

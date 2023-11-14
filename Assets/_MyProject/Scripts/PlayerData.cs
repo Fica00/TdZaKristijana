@@ -188,7 +188,7 @@ public class PlayerData
                 return _unlockedWeapon.Upgrade2;
             }
         }
-        throw new Exception("didnt find upgrade1 level for weapon: " + _weaponId);
+        throw new Exception("didnt find upgrade2 level for weapon: " + _weaponId);
     }
 
     public List<Weapon> UnlockedWeapons

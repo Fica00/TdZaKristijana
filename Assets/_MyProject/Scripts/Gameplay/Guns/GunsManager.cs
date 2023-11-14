@@ -129,7 +129,7 @@ public class GunsManager : MonoBehaviour
             GunSO _selectedGun = GunSO.Get(DataManager.Instance.PlayerData.SelectedGuns[i]);
             gunButtons[counter].image.sprite = _selectedGun.UIPreview;
             gunButtons[counter].gameObject.SetActive(true);
-            gunControllers.Add(Instantiate(_selectedGun.Prefab, gunHolder).GetComponent<GunController>());
+            gunControllers.Add(Instantiate(_selectedGun.Prefab, gunHolder.position,Quaternion.identity, gunHolder).GetComponent<GunController>());
             counter++;
         }
 

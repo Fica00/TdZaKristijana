@@ -6,7 +6,7 @@ public class EnemySpawnPointMovement : MonoBehaviour
 {
     void Update()
     {
-        transform.position = new Vector3(PlayerManager.player.transform.position.x + 17, 5.6f, 0);
+        transform.position = new Vector3(PlayerManager.player.transform.position.x + 17, 5f, 0);
     }
 }
 

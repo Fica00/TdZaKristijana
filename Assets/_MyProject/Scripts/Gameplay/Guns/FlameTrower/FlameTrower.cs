@@ -26,14 +26,45 @@ public class FlameTrower : GunController
         Fired?.Invoke();
         for (int i = 0; i < amountOfBulletsToShoot; i++)
         {
-            GameObject _bullet = Instantiate(bullet, shootPoint);
+            GameObject _bullet = Instantiate(bullet, shootPoint.position, Quaternion.identity);
+            _bullet.transform.localScale = Vector3.one;
             _bullet.GetComponent<BulletController>().SetDamage(gun.Bullet.Damage[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)]);
+
             Vector2 _dir = (_position - transform.position).normalized;
             float _angle = Random.Range(-spreed, spreed);
             _dir = Quaternion.Euler(0, 0, _angle) * _dir;
             _dir = _dir.normalized;
-            _bullet.GetComponent<Rigidbody2D>().velocity = _dir * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+
+
+            if (PlayerMovement.isFlipped)
+            {
+                if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x <= 0)
+                {
+                    Vector2 flipped = new(_dir.x * -1, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+                }
+                else
+                {
+                    Vector2 flipped = new(_dir.x, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+                }
+            }
+            else
+            {
+                if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x >= 0)
+                {
+                    Vector2 flipped = new(_dir.x * -1, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+                }
+                else
+                {
+                    Vector2 flipped = new(_dir.x, _dir.y);
+                    _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+                }
+            }
+
         }
+
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
         CurrentGunShotsAmount -= amountOfBulletsToShoot;
         if (CurrentGunShotsAmount < 0)
@@ -42,6 +73,8 @@ public class FlameTrower : GunController
             Reload();
         }
     }
+
+
 
     protected override IEnumerator ReloadRoutine()
     {

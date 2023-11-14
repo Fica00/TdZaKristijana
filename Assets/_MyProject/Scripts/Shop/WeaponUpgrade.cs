@@ -5,7 +5,6 @@ using System;
 
 public class WeaponUpgrade : MonoBehaviour
 {
-
     public static Action<GunSO> Equipt;
 
     [SerializeField] GameObject unlockedHolder;
@@ -53,7 +52,7 @@ public class WeaponUpgrade : MonoBehaviour
         }
         else
         {
-            UIManager.Instance.OkDialog.Show("You dont have enaught gold");
+            UIManager.Instance.OkDialog.Show("You dont have enough gold");
         }
     }
 
@@ -67,7 +66,7 @@ public class WeaponUpgrade : MonoBehaviour
         }
         else
         {
-            UIManager.Instance.OkDialog.Show("You don't have enaught gold");
+            UIManager.Instance.OkDialog.Show("You don't have enough gold");
         }
     }
 
@@ -81,7 +80,7 @@ public class WeaponUpgrade : MonoBehaviour
         }
         else
         {
-            UIManager.Instance.OkDialog.Show("You don't have enaught gold");
+            UIManager.Instance.OkDialog.Show("You don't have enough gold");
         }
     }
 

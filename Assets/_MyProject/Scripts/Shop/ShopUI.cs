@@ -40,6 +40,7 @@ public class ShopUI : MonoBehaviour
         ClearItems();
         shownNextButton.onClick.AddListener(ShowAbilities);
         showPreviusButton.onClick.AddListener(ShowHealthUpgrade);
+
         List<GunSO> _guns = GunSO.Get().ToList();
         _guns = _guns.OrderBy(element => element.Id).ToList();
 

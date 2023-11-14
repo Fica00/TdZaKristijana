@@ -22,11 +22,15 @@ MonoBehaviour:
     - 10
     - 11
     - 12
+    - 12
+    - 12
     <Damage>k__BackingField:
     - 4
     - 5
     - 6
     - 7
+    - 8
+    - 8
     - 8
   <AmountOfBullets>k__BackingField: 0500000005000000050000000500000006000000
   <AmountOfClips>k__BackingField: 6300000063000000630000006300000063000000
@@ -56,5 +60,5 @@ MonoBehaviour:
   - 1600
   - 2200
   <UnclockCost>k__BackingField: 0
-  <Spread>k__BackingField: 4
+  <Spread>k__BackingField: 1
   <Sound>k__BackingField: {fileID: 8300000, guid: 5bfb3c4ecdd55fa42b498c67b26eba48, type: 3}

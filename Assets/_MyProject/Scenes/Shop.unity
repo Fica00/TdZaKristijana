@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00002888433}
+  m_AnchoredPosition: {x: 0, y: -0.00001213182}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6793104
@@ -268,13 +268,13 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 398.8, y: 497.3}
   m_Spacing: {x: 50.1, y: 56.89}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!1 &14311759
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 76.57, y: -91.55}
+  m_AnchoredPosition: {x: 76.57001, y: -91.54999}
   m_SizeDelta: {x: -148.61, y: -161.55}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &160474053
@@ -889,8 +889,8 @@ MonoBehaviour:
   homeButton: {fileID: 1391525608}
   itemsHolder: {fileID: 6793103}
   weaponUpgradePrefab: {fileID: -870266139080044870, guid: b87210a68e4583f41b23d8a07d70e3f9, type: 3}
-  abilityUnlockPrefab: {fileID: 4083617652667078795, guid: 2df6880e6b1d3c544819513c7c09efc4, type: 3}
-  healthUpgradePrefab: {fileID: 7419857693649240214, guid: f271cf237adaa6544a9d8aabd9bdb2d6, type: 3}
+  abilityUnlockPrefab: {fileID: 3807230725599381513, guid: 3fa5810b9103c8f49a1362dfe9aee9df, type: 3}
+  healthUpgradePrefab: {fileID: 6559296438909637222, guid: 55d6d185108f97445ad00da469d73724, type: 3}
   shownNextButton: {fileID: 2096668378}
   showPreviusButton: {fileID: 1925585352}
   goldDisplay: {fileID: 679310204}
@@ -2608,17 +2608,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925585350}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1746985615}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -100}
+  m_AnchoredPosition: {x: 120, y: -80}
   m_SizeDelta: {x: 168, y: 177.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925585352
@@ -2697,7 +2697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 961a07f4e0920b148a7b5698be7016d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9d51eb510ba79e4a899e2ce5a139123, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2921,7 +2921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -100}
+  m_AnchoredPosition: {x: -120, y: -100}
   m_SizeDelta: {x: 168, y: 177.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096668378

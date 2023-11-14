@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f1bc2d6398f9f4d8c7ccad9072c7ea, type: 3}
   m_Name: 2_Kalas
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 2
+  <Id>k__BackingField: 1
   <Name>k__BackingField: AK-47
   <HatColor>k__BackingField: 0
   <Bullet>k__BackingField:
@@ -22,12 +22,10 @@ MonoBehaviour:
     - 22
     - 23
     - 25
+    - 25
     <Damage>k__BackingField:
     - 2
     - 3
-    - 4
-    - 5
-    - 6
   <AmountOfBullets>k__BackingField: 64000000780000008c00000096000000a0000000
   <AmountOfClips>k__BackingField: 0300000003000000040000000400000005000000
   <ReloadSpeed>k__BackingField:
@@ -56,5 +54,5 @@ MonoBehaviour:
   - 1600
   - 2200
   <UnclockCost>k__BackingField: 0
-  <Spread>k__BackingField: 1
+  <Spread>k__BackingField: 2
   <Sound>k__BackingField: {fileID: 8300000, guid: cf23b3646e25a5e4d922d261c779b510, type: 3}
