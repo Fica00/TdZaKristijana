@@ -43,8 +43,8 @@ MonoBehaviour:
   - 0.2
   - 0.2
   <Prefab>k__BackingField: {fileID: 3504099082220114579, guid: 6cdffe9da3edf23409df3ecf1a8ad8fd, type: 3}
-  <UIPreview>k__BackingField: {fileID: 21300000, guid: 0ced441542e621f4c8a5abf924d91811, type: 3}
-  <Sprite>k__BackingField: {fileID: 21300000, guid: e461f3618afea934c8940c1d5b1c48f0, type: 3}
+  <UIPreview>k__BackingField: {fileID: 21300000, guid: 335006b8a33833e4291852d2fd570b5a, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 2a6af4c3218ae924eac6c628a5aa80b2, type: 3}
   <Upgrade1Cost>k__BackingField:
   - 400
   - 800

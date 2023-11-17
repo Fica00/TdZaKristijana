@@ -399,11 +399,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySO: {fileID: 11400000, guid: 2162a95ca3534ce43b1fa36e48a5f9b0, type: 2}
-  fillBar: {fileID: 1621025996104466855}
+  fillBar: {fileID: 5622201331265974304}
   animatorController: {fileID: 4952066439794858258}
   shootPoint: {fileID: 0}
   graphics: {fileID: 274452118593840299}
-  fillBarHolder: {fileID: 6470418708912706304}
+  fillBarHolder: {fileID: 5076306926071433641}
 --- !u!1 &7813620737563215067
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +462,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 2072524217
   m_SortingOrder: 0
   m_TargetDisplay: 0

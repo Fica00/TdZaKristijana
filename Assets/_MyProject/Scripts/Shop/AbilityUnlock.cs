@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class AbilityUnlock : MonoBehaviour
 {
-    [SerializeField] Image iconDisplay;
+    [SerializeField] Image iconLockedDisplay;
+    [SerializeField] Image iconUnlockedDisplay;
     [SerializeField] GameObject unlockedHolder;
     [SerializeField] GameObject lockedHolder;
     [SerializeField] Button unlockButton;
@@ -42,7 +43,7 @@ public class AbilityUnlock : MonoBehaviour
     public void SetUnlocked(AbilitiesSO _abilitySO)
     {
         abilitiSO = _abilitySO;
-        iconDisplay.sprite = abilitiSO.Sprite;
+        iconUnlockedDisplay.sprite = abilitiSO.Sprite;
 
         unlockedHolder.SetActive(true);
         lockedHolder.SetActive(false);
@@ -51,7 +52,7 @@ public class AbilityUnlock : MonoBehaviour
     public void SetLocked(AbilitiesSO _abilitySO)
     {
         abilitiSO = _abilitySO;
-        iconDisplay.sprite = abilitiSO.Sprite;
+        iconLockedDisplay.sprite = abilitiSO.Sprite;
 
         unlockedHolder.SetActive(false);
         lockedHolder.SetActive(true);

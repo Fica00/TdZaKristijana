@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] SpriteRenderer playerSprite;
     [SerializeField] Transform gunPivot;
+    
 
     Vector2 originalSize;
     Vector2 originalOffset;
@@ -35,13 +36,11 @@ public class PlayerMovement : MonoBehaviour
         Move();
         Jump();
         Roll();
-
-
     }
 
     void Move()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (SimpleInput.GetAxis("Horizontal") < 0)
         {
             isFlipped = true;
 
@@ -49,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(-playerSpeed * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (SimpleInput.GetAxis("Horizontal") > 0)
         {
             isFlipped = false;
 
@@ -59,10 +58,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void Jump()
+    public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (JumpButton.isJumpPressed && isGrounded)
         {
+            JumpButton.isJumpPressed = false;
             rb.AddForce(Vector3.up * jumpStrength, ForceMode2D.Impulse);
         }
     }
@@ -70,8 +70,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (RollButton.isRollPressed)
         {
+            RollButton.isRollPressed = false;
             if (canRoll)
             {
                 canRoll = false;

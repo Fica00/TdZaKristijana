@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1093489539418084840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -551,7 +551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48dd58e3aabd73448a3b78fb74b702a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconDisplay: {fileID: 7108764344124016515}
+  iconLockedDisplay: {fileID: 5044303102178214390}
+  iconUnlockedDisplay: {fileID: 7108764344124016515}
   unlockedHolder: {fileID: 1688567265720452406}
   lockedHolder: {fileID: 467263278557104564}
   unlockButton: {fileID: 9069454623449143344}
