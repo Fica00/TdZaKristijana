@@ -18,19 +18,19 @@ public class GunsManager : MonoBehaviour
     bool isAlive = true;
     Sequence hatSequence;
 
-
     private void OnEnable()
     {
         gunButtons[0].onClick.AddListener(SelectFirstGun);
         gunButtons[1].onClick.AddListener(SelectSecoundGun);
         gunButtons[2].onClick.AddListener(SelectThirdGun);
+
         GunController.UpdatedClips += UpdateClips;
         BaseHealthHandler.ILost += ILost;
         LosePanel.PlayerReviewd += IReviewd;
 
         hatSequence = DOTween.Sequence();
     }
-
+    //AudioManager.Instance.PlaySoundEffect(selectedGun.GunSO.Sound);
     private void OnDisable()
     {
         gunButtons[0].onClick.RemoveListener(SelectFirstGun);
@@ -166,7 +166,7 @@ public class GunsManager : MonoBehaviour
         {
             return;
         }
-        
+        if(selectedGun.CurrentGunShotsAmount > 0)
         AudioManager.Instance.PlaySoundEffect(selectedGun.GunSO.Sound);
     }
 }

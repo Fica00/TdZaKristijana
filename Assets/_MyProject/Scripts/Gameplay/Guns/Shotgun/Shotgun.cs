@@ -28,6 +28,9 @@ public class Shotgun : GunController
         Fired?.Invoke();
         for (int i = 0; i < amountOfBulletsToShoot; i++)
         {
+            if (CurrentGunShotsAmount > 0)
+                AudioManager.Instance.PlaySoundEffect(GunSO.Sound);
+
             GameObject _bullet = Instantiate(bullet);
             _bullet.transform.position = shootPoint.transform.position;
             _bullet.GetComponent<BulletController>().SetDamage(gun.Bullet.Damage[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)]);
