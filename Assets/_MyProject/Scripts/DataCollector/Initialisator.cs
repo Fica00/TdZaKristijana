@@ -4,6 +4,7 @@ public class Initialisator : MonoBehaviour
 {
     private void OnEnable()
     {
+
         PremmisionManager.Finished += InitScriptableObjects;
     }
 
@@ -18,11 +19,11 @@ public class Initialisator : MonoBehaviour
         GunSO.Init();
         AbilitiesSO.Init();
         LevelManager.Instance.Init();
-        FinishInit();
+        //FinishInit();
     }
 
     void FinishInit()
     {
-        SceneManager.LoadMainMenu();
+        
     }
 }

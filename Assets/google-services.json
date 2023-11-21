@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "461679292042",
+    "project_id": "kristijan-a484e",
+    "storage_bucket": "kristijan-a484e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461679292042:android:574d238fa0b526660e8773",
+        "android_client_info": {
+          "package_name": "com.magmadev.kristijan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2-o1Q1elAv2Z7xM8_8hW6iDIvhrZXq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

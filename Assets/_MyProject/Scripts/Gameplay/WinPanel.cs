@@ -11,7 +11,7 @@ public class WinPanel : MonoBehaviour
 
     public void Setup()
     {
-        AdsManager.Instance.ShowInterstitialAd();
+        //AdsManager.Instance.ShowInterstitialAd();
         Time.timeScale = 0;
         coinsDisplay.text = GameplayManager.Instance.Money.ToString();
         scoreDisplay.text = GameplayManager.Instance.Score.ToString();

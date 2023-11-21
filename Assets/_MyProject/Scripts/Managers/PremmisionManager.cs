@@ -42,6 +42,7 @@ public class PremmisionManager : MonoBehaviour
                 Finished?.Invoke();
                 yield break;
             }
+
             while (!CheckForStoragePremmision())
             {
                 if (counter >= 5)
