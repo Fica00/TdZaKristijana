@@ -35,6 +35,7 @@ public class RPG : GunController
             _bullet.GetComponent<Rigidbody2D>().velocity = _dir * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
         }
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+        AudioManager.Instance.PlaySoundEffect(GunSO.Sound);
         CurrentGunShotsAmount--;
         if (CurrentGunShotsAmount == 0)
         {

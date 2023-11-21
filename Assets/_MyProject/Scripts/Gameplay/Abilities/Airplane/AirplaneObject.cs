@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 
 public class AirplaneObject : MonoBehaviour
@@ -14,12 +14,15 @@ public class AirplaneObject : MonoBehaviour
 
     public void StartFlying()
     {
+        gameObject.SetActive(true);
+
         isFlying = true;
         transform.position = startPosition.position + PlayerManager.player.transform.position;
         transform.DOMove(endPosition.position + PlayerManager.player.transform.position, flightDuration).onComplete += () =>
          {
              isFlying = false;
              transform.position = startPosition.position;
+             gameObject.SetActive(false);
          };
     }
 

@@ -66,6 +66,7 @@ public class FlameTrower : GunController
         }
 
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+        AudioManager.Instance.PlaySoundEffect(GunSO.Sound);
         CurrentGunShotsAmount -= amountOfBulletsToShoot;
         if (CurrentGunShotsAmount < 0)
         {

@@ -55,4 +55,4 @@ MonoBehaviour:
   - 2200
   <UnclockCost>k__BackingField: 0
   <Spread>k__BackingField: 2
-  <Sound>k__BackingField: {fileID: 8300000, guid: cf23b3646e25a5e4d922d261c779b510, type: 3}
+  <Sound>k__BackingField: {fileID: 8300000, guid: 6b3d7c0bbb1f0a94085e6dfc511e769e, type: 3}

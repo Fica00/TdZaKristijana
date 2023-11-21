@@ -9,6 +9,13 @@ public class MGK : GunController
     int amountOfBulletsToShoot = 1;
     float cooldownCounter = 0;
 
+    bool isPlaying;
+
+
+    private void OnEnable()
+    {
+        isPlaying = false;
+    }
     private void Awake()
     {
         GunShots = gun.AmountOfBullets[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
@@ -16,6 +23,8 @@ public class MGK : GunController
         AmountOfClips = gun.AmountOfClips[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
 
         CurrentGunShotsAmount = GunShots;
+
+        isPlaying = false;
     }
 
 
@@ -73,6 +82,10 @@ public class MGK : GunController
         }
 
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+        if(isPlaying == false)
+        {
+            StartCoroutine(PlaySound());
+        }
         CurrentGunShotsAmount--;
         if (CurrentGunShotsAmount == 0)
         {
@@ -100,4 +113,11 @@ public class MGK : GunController
         }
     }
 
+    IEnumerator PlaySound()
+    {
+        isPlaying = true;
+        AudioManager.Instance.PlaySoundEffect(GunSO.Sound);
+        yield return new WaitForSeconds(GunSO.Sound.length);
+        isPlaying = false;
+    }
 }

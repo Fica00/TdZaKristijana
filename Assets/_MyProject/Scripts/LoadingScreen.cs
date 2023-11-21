@@ -1,38 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LoadingScreen : MonoBehaviour
 {
-    [SerializeField] Slider loadingSlider;
-    public static bool isLoadingFinished;
+    [SerializeField] private Slider loadingSlider;
+    [SerializeField] private float duration;
 
-    void OnEnable()
+    private void Start()
     {
-        isLoadingFinished = false;
+        loadingSlider.DOValue(1, duration).OnComplete(SceneManager.LoadMainMenu);
     }
-
-    void Update()
-    {
-
-        if (loadingSlider.value >= 2.5f)
-        {
-            OnLoaded();
-        }
-        else
-        {
-            loadingSlider.value += Time.deltaTime;
-
-        }
-    }
-
-    void OnLoaded()
-    {
-        SceneManager.LoadMainMenu();
-        gameObject.SetActive(false);
-        return;
-    }
-
-
 }

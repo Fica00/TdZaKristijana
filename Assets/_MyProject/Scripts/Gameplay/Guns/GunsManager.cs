@@ -166,7 +166,6 @@ public class GunsManager : MonoBehaviour
         {
             return;
         }
-        if(selectedGun.CurrentGunShotsAmount > 0)
-        AudioManager.Instance.PlaySoundEffect(selectedGun.GunSO.Sound);
+
     }
 }
