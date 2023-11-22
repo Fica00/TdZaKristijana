@@ -11,8 +11,9 @@ public class ShopUI : MonoBehaviour
     [SerializeField] WeaponUpgrade weaponUpgradePrefab;
     [SerializeField] AbilityUnlock abilityUnlockPrefab;
     [SerializeField] HealthUpgrade healthUpgradePrefab;
-    [SerializeField] Button shownNextButton;
-    [SerializeField] Button showPreviusButton;
+    [SerializeField] Button showGuns;
+    [SerializeField] Button showHealth;
+    [SerializeField] Button showAbilities;
     [SerializeField] TextMeshProUGUI goldDisplay;
 
     List<GameObject> shownItems = new List<GameObject>();
@@ -38,8 +39,9 @@ public class ShopUI : MonoBehaviour
     void LoadWeapons()
     {
         ClearItems();
-        shownNextButton.onClick.AddListener(ShowAbilities);
-        showPreviusButton.onClick.AddListener(ShowHealthUpgrade);
+
+        showAbilities.onClick.AddListener(ShowAbilities);
+        showHealth.onClick.AddListener(ShowHealthUpgrade);
 
         List<GunSO> _guns = GunSO.Get().ToList();
         _guns = _guns.OrderBy(element => element.Id).ToList();
@@ -72,8 +74,10 @@ public class ShopUI : MonoBehaviour
     void ShowAbilities()
     {
         ClearItems();
-        shownNextButton.onClick.AddListener(ShowHealthUpgrade);
-        showPreviusButton.onClick.AddListener(LoadWeapons);
+
+        showGuns.onClick.AddListener(LoadWeapons);
+        showHealth.onClick.AddListener(ShowHealthUpgrade);
+
         List<AbilitiesSO> _abilities = AbilitiesSO.Get().ToList();
         _abilities = _abilities.OrderBy(element => element.Id).ToList();
 
@@ -105,8 +109,10 @@ public class ShopUI : MonoBehaviour
     void ShowHealthUpgrade()
     {
         ClearItems();
-        shownNextButton.onClick.AddListener(LoadWeapons);
-        showPreviusButton.onClick.AddListener(ShowAbilities);
+
+        showGuns.onClick.AddListener(LoadWeapons);
+        showAbilities.onClick.AddListener(ShowAbilities);
+
         HealthUpgrade _healthDisplay = Instantiate(healthUpgradePrefab, itemsHolder);
         _healthDisplay.Setup();
         shownItems.Add(_healthDisplay.gameObject);
@@ -119,8 +125,10 @@ public class ShopUI : MonoBehaviour
 
     void ClearItems()
     {
-        shownNextButton.onClick.RemoveAllListeners();
-        showPreviusButton.onClick.RemoveAllListeners();
+        showGuns.onClick.RemoveAllListeners();
+        showHealth.onClick.RemoveAllListeners();
+        showAbilities.onClick.RemoveAllListeners();
+
         foreach (var _item in shownItems)
         {
             Destroy(_item);

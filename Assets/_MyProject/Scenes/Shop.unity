@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 2
+  m_VerticalFit: 1
 --- !u!114 &6793105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,10 +1024,11 @@ MonoBehaviour:
   homeButton: {fileID: 1391525608}
   itemsHolder: {fileID: 6793103}
   weaponUpgradePrefab: {fileID: -870266139080044870, guid: b87210a68e4583f41b23d8a07d70e3f9, type: 3}
-  abilityUnlockPrefab: {fileID: 3807230725599381513, guid: 3fa5810b9103c8f49a1362dfe9aee9df, type: 3}
-  healthUpgradePrefab: {fileID: 6559296438909637222, guid: 55d6d185108f97445ad00da469d73724, type: 3}
-  shownNextButton: {fileID: 2096668378}
-  showPreviusButton: {fileID: 1925585352}
+  abilityUnlockPrefab: {fileID: 357980583241495119, guid: 9ae6482eaa5a07c498e6d76c1234ca16, type: 3}
+  healthUpgradePrefab: {fileID: 7354842180186054439, guid: 52d472537701fdb4ebd72d720e467f14, type: 3}
+  showGuns: {fileID: 1635059132}
+  showHealth: {fileID: 1834626113}
+  showAbilities: {fileID: 1360378908}
   goldDisplay: {fileID: 679310204}
 --- !u!114 &601240882
 MonoBehaviour:

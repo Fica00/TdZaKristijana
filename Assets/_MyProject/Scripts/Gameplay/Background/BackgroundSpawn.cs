@@ -5,24 +5,26 @@ using UnityEngine;
 public class BackgroundSpawn : MonoBehaviour
 {
     Vector3 previousLocalPos;
+    public Transform camera;
 
     void Update()
     {
         TeleportBackground();
-
     }
 
     void TeleportBackground()
     {
-        if (PlayerManager.player.transform.position.x - transform.position.x > 14f)
+        if (transform.position.x - camera.localPosition.x < -21f)
         {
             previousLocalPos = transform.localPosition;
-            transform.localPosition = new Vector3(transform.localPosition.x + 2 * 6.048f, transform.localPosition.y);
+            transform.localPosition = new Vector3(transform.localPosition.x + 2 * 6.336f, transform.localPosition.y);
         }
 
-        if (PlayerManager.player.transform.position.x - transform.position.x < -27.5f)
+        if (transform.position.x - camera.localPosition.x > 21f)
         {
             transform.localPosition = previousLocalPos;
         }
+
+        print(transform.position.x - camera.localPosition.x + gameObject.name);
     }
 }
