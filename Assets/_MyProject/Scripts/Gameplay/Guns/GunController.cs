@@ -21,6 +21,7 @@ public class GunController : MonoBehaviour
 
     public GunSO GunSO => gun;
 
+   
     public int GunShots
     {
         get

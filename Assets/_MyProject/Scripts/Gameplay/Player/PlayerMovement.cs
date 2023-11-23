@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] SpriteRenderer playerSprite;
     [SerializeField] Transform gunPivot;
-    
 
     Vector2 originalSize;
     Vector2 originalOffset;

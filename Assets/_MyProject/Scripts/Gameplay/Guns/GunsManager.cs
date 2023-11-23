@@ -49,6 +49,7 @@ public class GunsManager : MonoBehaviour
     private void ILost()
     {
         isAlive = false;
+        gunHolder.gameObject.SetActive(false);
     }
 
     void UpdateClips(GunController _updatedGunController)

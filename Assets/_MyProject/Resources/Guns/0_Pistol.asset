@@ -25,13 +25,13 @@ MonoBehaviour:
     - 12
     - 12
     <Damage>k__BackingField:
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 8
-    - 8
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
   <AmountOfBullets>k__BackingField: 0500000005000000050000000500000006000000
   <AmountOfClips>k__BackingField: 6300000063000000630000006300000063000000
   <ReloadSpeed>k__BackingField:
@@ -47,8 +47,8 @@ MonoBehaviour:
   - 0.5
   - 0.3
   <Prefab>k__BackingField: {fileID: 8289824259756243651, guid: 965032273007a804ca5ab4a656443d78, type: 3}
-  <UIPreview>k__BackingField: {fileID: 21300000, guid: db7f658c53f5d52459cab63848287143, type: 3}
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 6597ab6c901a04a43a1f351c99626d0f, type: 3}
+  <UIPreview>k__BackingField: {fileID: 21300000, guid: 0468d25894b3a1e4bb3fcbc2c94f1950, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 6c5d02f02b3b89149af089eaca7502c4, type: 3}
   <Upgrade1Cost>k__BackingField:
   - 400
   - 800

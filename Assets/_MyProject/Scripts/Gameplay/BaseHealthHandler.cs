@@ -12,7 +12,7 @@ public class BaseHealthHandler : MonoBehaviour
 
     float startingHealth;
     float currentHealth;
-    bool isDead;
+    public bool isDead;
 
     public void Setup(float _startingHealth)
     {
