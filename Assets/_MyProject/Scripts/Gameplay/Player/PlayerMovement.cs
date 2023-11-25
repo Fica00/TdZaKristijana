@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] SpriteRenderer playerSprite;
     [SerializeField] Transform gunPivot;
+    [SerializeField] Joystick joystick;
 
     Vector2 originalSize;
     Vector2 originalOffset;
@@ -19,10 +20,14 @@ public class PlayerMovement : MonoBehaviour
     public static bool isFlipped = false;
     bool canRoll = true;
     bool isGrounded = true;
-
+    bool isJumping;
     const string groundTag = "Ground";
+    const string enemyTag = "Enemy";
+
     private void Awake()
     {
+        isJumping = false;
+
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<BoxCollider2D>();
 
@@ -33,35 +38,36 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
         Roll();
+    }
+
+    private void FixedUpdate()
+    {
+        Jump();
     }
 
     void Move()
     {
-        if (SimpleInput.GetAxis("Horizontal") < 0)
+        if (joystick.Horizontal < 0)
         {
             isFlipped = true;
-
             FlipSprites(isFlipped);
-            transform.Translate(-playerSpeed * Time.deltaTime, 0, 0);
+            transform.Translate(-joystick.Horizontal * Time.deltaTime * playerSpeed, 0, 0);
         }
 
-        if (SimpleInput.GetAxis("Horizontal") > 0)
+        if (joystick.Horizontal > 0)
         {
             isFlipped = false;
-
             FlipSprites(isFlipped);
-            transform.Translate(playerSpeed * Time.deltaTime, 0, 0);
+            transform.Translate(joystick.Horizontal * Time.deltaTime * playerSpeed, 0, 0);
         }
 
     }
 
     public void Jump()
     {
-        if (JumpButton.isJumpPressed && isGrounded)
+        if (joystick.Vertical > 0.7f && isGrounded)
         {
-            JumpButton.isJumpPressed = false;
             rb.AddForce(Vector3.up * jumpStrength, ForceMode2D.Impulse);
         }
     }
@@ -69,9 +75,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Roll()
     {
-        if (RollButton.isRollPressed)
+        if (joystick.Vertical < -0.7f)
         {
-            RollButton.isRollPressed = false;
             if (canRoll)
             {
                 canRoll = false;
@@ -93,14 +98,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FlipSprites(bool flipDir)
+    public void FlipSprites(bool flipDir)
     {
-        playerSprite.flipX = flipDir;
-        int gunRotationDegree = flipDir ? 180 : 0;
-        float gunPosition = flipDir ? -0.26f : 0.26f;
+        //playerSprite.flipX = flipDir;
+        int direction = flipDir ? 180 : 0;
+        //float gunPosition = flipDir ? -0.26f : 0.26f;
 
-        gunPivot.transform.eulerAngles = new Vector2(0, gunRotationDegree);
-        gunPivot.transform.localPosition = new Vector2(gunPosition, gunPivot.transform.localPosition.y);
+        //gunPivot.transform.eulerAngles = new Vector2(0, gunRotationDegree);
+        //gunPivot.transform.localPosition = new Vector2(gunPosition, gunPivot.transform.localPosition.y);
+
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, direction, transform.eulerAngles.z);
+
     }
 
     IEnumerator RollCoolDown(float time)
@@ -109,19 +117,18 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
     }
 
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag(groundTag))
+        if (collision.transform.CompareTag(groundTag) || collision.transform.CompareTag(enemyTag))
         {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             isGrounded = true;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag(groundTag))
+        if (collision.transform.CompareTag(groundTag) || collision.transform.CompareTag(enemyTag))
         {
             isGrounded = false;
         }

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class MGK : GunController
 {
-
     float spreed;
 
     int amountOfBulletsToShoot = 1;
@@ -30,8 +29,21 @@ public class MGK : GunController
 
     public override void Fire(Vector3 _position)
     {
-        print(gun.Id);
+        //print(PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
 
+        if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x <= 0)
+        {
+            PlayerMovement.isFlipped = false;
+            PlayerManager.player.GetComponent<PlayerMovement>().FlipSprites(PlayerMovement.isFlipped);
+        }
+        else
+        {
+            PlayerMovement.isFlipped = true;
+            PlayerManager.player.GetComponent<PlayerMovement>().FlipSprites(PlayerMovement.isFlipped);
+        }
+
+
+        print(gun.Id);
 
         if (cooldownCounter > 0 || CurrentGunShotsAmount == 0)
         {
@@ -42,15 +54,16 @@ public class MGK : GunController
         for (int i = 0; i < amountOfBulletsToShoot; i++)
         {
             GameObject _bullet = Instantiate(bullet);
+
             _bullet.transform.position = shootPoint.transform.position;
             _bullet.GetComponent<BulletController>().SetDamage(gun.Bullet.Damage[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)]);
 
             Vector2 _dir = (_position - transform.position).normalized;
+
             float _angle = Random.Range(-spreed, spreed);
+
             _dir = Quaternion.Euler(0, 0, _angle) * _dir;
             _dir = _dir.normalized;
-
-
 
             if (PlayerMovement.isFlipped)
             {
@@ -82,7 +95,7 @@ public class MGK : GunController
         }
 
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
-        if(isPlaying == false)
+        if (isPlaying == false)
         {
             StartCoroutine(PlaySound());
         }

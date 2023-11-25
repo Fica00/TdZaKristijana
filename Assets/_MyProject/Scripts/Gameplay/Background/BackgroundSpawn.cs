@@ -25,6 +25,6 @@ public class BackgroundSpawn : MonoBehaviour
             transform.localPosition = previousLocalPos;
         }
 
-        print(transform.position.x - camera.localPosition.x + gameObject.name);
+        //print(transform.position.x - camera.localPosition.x + gameObject.name);
     }
 }

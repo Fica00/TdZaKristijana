@@ -43,9 +43,9 @@ public class EnemyObject : MonoBehaviour
         throw new Exception("Die must be overriden");
     }
 
-    //protected void Flip()
-    //{
-    //    if (transform.position.x - PlayerManager.player.transform.position.x <= 1f)
-    //        print("proso");
-    //}
+    protected void FlipSprites(bool flipDir)
+    {
+        int direction = flipDir ? 180 : 0;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, direction, transform.eulerAngles.z);
+    }
 }

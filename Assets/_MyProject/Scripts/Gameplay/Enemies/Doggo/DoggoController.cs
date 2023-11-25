@@ -34,6 +34,12 @@ public class DoggoController : EnemyObject
     void Move()
     {
         Vector3 _targetPosition = target.position;
+
+        if (_targetPosition.x > transform.position.x)
+            FlipSprites(true);
+        else
+            FlipSprites(false);
+
         _targetPosition.y = myTransform.position.y;
         float _distance = Vector3.Distance(myTransform.position, _targetPosition);
         if (_distance > enemySO.Range)

@@ -20,6 +20,18 @@ public class Shotgun : GunController
 
     public override void Fire(Vector3 _position)
     {
+        if (PlayerManager.player.transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x <= 0)
+        {
+            PlayerMovement.isFlipped = false;
+            PlayerManager.player.GetComponent<PlayerMovement>().FlipSprites(PlayerMovement.isFlipped);
+        }
+        else
+        {
+            PlayerMovement.isFlipped = true;
+            PlayerManager.player.GetComponent<PlayerMovement>().FlipSprites(PlayerMovement.isFlipped);
+        }
+
+
         if (cooldownCounter > 0 || CurrentGunShotsAmount == 0)
         {
             return;
