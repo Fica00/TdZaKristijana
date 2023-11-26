@@ -20,13 +20,16 @@ public class PlayerMovement : MonoBehaviour
     public static bool isFlipped = false;
     bool canRoll = true;
     bool isGrounded = true;
-    bool isJumping;
+    bool canMoveLeft = true;
+    bool canMoveRight = true;
+
     const string groundTag = "Ground";
     const string enemyTag = "Enemy";
+    const string borderTagLeft = "BorderLeft";
+    const string borderTagRight = "BorderRight";
 
     private void Awake()
     {
-        isJumping = false;
 
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<BoxCollider2D>();
@@ -48,14 +51,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        if (joystick.Horizontal < 0)
+
+        if (joystick.Horizontal < 0 && canMoveLeft)
         {
             isFlipped = true;
             FlipSprites(isFlipped);
             transform.Translate(-joystick.Horizontal * Time.deltaTime * playerSpeed, 0, 0);
         }
 
-        if (joystick.Horizontal > 0)
+        if (joystick.Horizontal > 0 && canMoveRight)
         {
             isFlipped = false;
             FlipSprites(isFlipped);
@@ -117,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag(groundTag) || collision.transform.CompareTag(enemyTag))
@@ -124,6 +129,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
             isGrounded = true;
         }
+
+        if (collision.transform.CompareTag(borderTagLeft))
+            canMoveLeft = false;
+
+        if (collision.transform.CompareTag(borderTagRight))
+            canMoveRight = false;
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -132,5 +144,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+
+        if (collision.transform.CompareTag(borderTagLeft))
+            canMoveLeft = true;
+
+        if (collision.transform.CompareTag(borderTagRight))
+            canMoveRight = true;
     }
 }
