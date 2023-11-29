@@ -15,7 +15,7 @@ MonoBehaviour:
   <Id>k__BackingField: 1
   <Type>k__BackingField: 0
   <Health>k__BackingField: 30
-  <Range>k__BackingField: 5
+  <Range>k__BackingField: 10
   <MovementSpeed>k__BackingField: 1
   <AttackCooldown>k__BackingField: 3
   <CoinReward>k__BackingField: 7
@@ -23,5 +23,5 @@ MonoBehaviour:
   <AttackPrefab>k__BackingField: {fileID: 2013924837807565661, guid: 6a0cb0902ed35b04eb6462ab61fe0ce1, type: 3}
   <ScoreReward>k__BackingField: 30
   <AttackDamage>k__BackingField: 10
-  <BulletSpeed>k__BackingField: 0
+  <BulletSpeed>k__BackingField: 2
   <MoveType>k__BackingField: 0

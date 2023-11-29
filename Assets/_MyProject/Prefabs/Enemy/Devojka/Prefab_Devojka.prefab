@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5314928588439104982}
   - component: {fileID: 274452118593840299}
-  - component: {fileID: 4952066439794858258}
   - component: {fileID: 3024481613054983013}
+  - component: {fileID: 1440415540284092396}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -75,18 +75,31 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -381903434, guid: 70cabe0d20765ae4ea06618f6b43130b, type: 3}
+  m_Sprite: {fileID: 1560488332, guid: c81376b2bf4499941841d0f861cf13fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.4, y: 1.99}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4952066439794858258
+--- !u!114 &3024481613054983013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3819564648187665350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6ae26c36abee47a85581740a5d4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 8567287536542645227}
+--- !u!95 &1440415540284092396
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -106,19 +119,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3024481613054983013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3819564648187665350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf6ae26c36abee47a85581740a5d4be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 8567287536542645227}
 --- !u!1 &6243486160854686095
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySO: {fileID: 11400000, guid: fd0c329fd6d637848bab4bb179863b81, type: 2}
   fillBar: {fileID: 1148638761939061361}
-  animatorController: {fileID: 4952066439794858258}
+  animatorController: {fileID: 0}
   graphics: {fileID: 274452118593840299}
   fillBarHolder: {fileID: 6243486160854686095}
 --- !u!1 &7813620737563215067
