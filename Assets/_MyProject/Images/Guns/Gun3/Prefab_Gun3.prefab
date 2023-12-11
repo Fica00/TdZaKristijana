@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: a1a514eda33188449a34b2b60a4e119f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 1.38, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2858357390820789079
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: ad6360b0c63665b4cbc2217113d87e66, type: 2}
-  bullet: {fileID: 1028206493973864929, guid: c2a1103be2ec174409d3b6424f32364b, type: 3}
+  bullet: {fileID: 1028206493973864929, guid: 02ac57fbbadba9842a243f0393430d28, type: 3}
   shootPoint: {fileID: 52369988405703996}
   <HoldToFire>k__BackingField: 1
 --- !u!1 &52369988405703995

@@ -130,6 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: db99afebb583b1c49951040b93f27799, type: 2}
-  bullet: {fileID: 1028206493973864929, guid: dda04e8e05e62cc4bb68f7af06dec4bc, type: 3}
+  bullet: {fileID: 1028206493973864929, guid: ebf14ffa713db6146a1e3daf2ecdcd54, type: 3}
   shootPoint: {fileID: 3504099082052259487}
   <HoldToFire>k__BackingField: 1

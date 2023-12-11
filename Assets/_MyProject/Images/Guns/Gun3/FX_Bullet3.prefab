@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5919173346853076335}
   - component: {fileID: 2185812519342315955}
   m_Layer: 0
-  m_Name: FX_Bullet1
+  m_Name: FX_Bullet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b689f4e9706a274d9a9e0816673d5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireEffect: {fileID: 6003916949948237816, guid: a0b655b20c737ab4d92432999080bda4, type: 3}
+  fireEffect: {fileID: 6003916949948237816, guid: 1d543f1a18c799e49a5ea4a3ba7b727e, type: 3}
   fireEffectOffset: {x: 1.3, y: 0, z: 0}
   effect: {fileID: 3925513437349480901, guid: e7bacd398c5dd33438e05079d8337fce, type: 3}
 --- !u!58 &235203082575580530
