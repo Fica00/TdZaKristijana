@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9f1bc2d6398f9f4d8c7ccad9072c7ea, type: 3}
-  m_Name: 1_Pump
+  m_Name: 1_Pump 1
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 2
+  <Id>k__BackingField: 1
   <Name>k__BackingField: Pump
   <HatColor>k__BackingField: 0.7
   <Bullet>k__BackingField:
@@ -45,16 +45,12 @@ MonoBehaviour:
   <Prefab>k__BackingField: {fileID: 3504099082220114579, guid: 6cdffe9da3edf23409df3ecf1a8ad8fd, type: 3}
   <UIPreview>k__BackingField: {fileID: 21300000, guid: 963cf3351862e7344a98d6dbd20ed561, type: 3}
   <Sprite>k__BackingField: {fileID: 21300000, guid: 5386f91dfbb941548a88849069140b0c, type: 3}
-  <Upgrade1Cost>k__BackingField:
-  - 400
-  - 800
-  - 1600
-  - 2200
-  <Upgrade2Cost>k__BackingField:
-  - 400
-  - 800
-  - 1600
-  - 2200
+  <UpgradeCost>k__BackingField:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
   <UnclockCost>k__BackingField: 0
   <Spread>k__BackingField: 10
   <Sound>k__BackingField: {fileID: 8300000, guid: c3e0990d9fa26f243911a533b2ced25a, type: 3}

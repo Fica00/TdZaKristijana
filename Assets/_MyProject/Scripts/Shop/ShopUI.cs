@@ -46,6 +46,7 @@ public class ShopUI : MonoBehaviour
         List<GunSO> _guns = GunSO.Get().ToList();
         _guns = _guns.OrderBy(element => element.Id).ToList();
 
+
         foreach (var _weapon in _guns)
         {
             WeaponUpgrade _weaponDisplay = Instantiate(weaponUpgradePrefab, itemsHolder);
@@ -67,6 +68,7 @@ public class ShopUI : MonoBehaviour
             {
                 _weaponDisplay.SetupLocked(_weapon);
             }
+
             shownItems.Add(_weaponDisplay.gameObject);
         }
     }
@@ -102,6 +104,7 @@ public class ShopUI : MonoBehaviour
             {
                 _abilityDisplay.SetLocked(_ability);
             }
+
             shownItems.Add(_abilityDisplay.gameObject);
         }
     }

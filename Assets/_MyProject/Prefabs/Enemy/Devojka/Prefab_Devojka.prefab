@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySO: {fileID: 11400000, guid: fd0c329fd6d637848bab4bb179863b81, type: 2}
   fillBar: {fileID: 1148638761939061361}
-  animatorController: {fileID: 0}
+  animatorController: {fileID: 1440415540284092396}
   graphics: {fileID: 274452118593840299}
   fillBarHolder: {fileID: 6243486160854686095}
 --- !u!1 &7813620737563215067

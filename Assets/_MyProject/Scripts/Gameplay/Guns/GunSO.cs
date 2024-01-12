@@ -18,24 +18,24 @@ public class GunSO : ScriptableObject
     [field: SerializeField] public GameObject Prefab { get; private set; }
     [field: SerializeField] public Sprite UIPreview { get; private set; }
     [field: SerializeField] public Sprite Sprite { get; private set; }
-    [field: SerializeField] public List<float> Upgrade1Cost { get; private set; }
-    [field: SerializeField] public List<float> Upgrade2Cost { get; private set; }
+    [field: SerializeField] public List<float> UpgradeCost { get; private set; }
     [field: SerializeField] public int UnclockCost { get; private set; }
     [field: SerializeField] public int Spread { get; private set; }
     [field: SerializeField] public AudioClip Sound { get; private set; }
 
     protected bool canFire;
 
-    static List<GunSO> allGuns;
+    private static List<GunSO> allGuns;
 
     public static void Init()
     {
         allGuns = Resources.LoadAll<GunSO>("Guns/").ToList();
+        Debug.Log(allGuns.Count);
     }
 
     public static GunSO Get(int _id)
     {
-        return allGuns.Find(element => element.Id == _id);
+        return allGuns.Find(_element => _element.Id == _id);
     }
 
     public static List<GunSO> Get()

@@ -69,7 +69,7 @@ public class PlayerData
         }
         else
         {
-            unlockedWeapons = new List<Weapon>() { new Weapon() { Id = 0, Upgrade1 = 0, Upgrade2 = 0 } };
+            unlockedWeapons = new List<Weapon>() { new Weapon() { Id = 0, Upgrade1 = 0} };
             PlayerPrefs.SetString(UNLOCKED_Weapons_KEY, JsonConvert.SerializeObject(unlockedWeapons));
         }
 
@@ -179,17 +179,6 @@ public class PlayerData
         throw new Exception("didnt find upgrade1 level for weapon: " + _weaponId);
     }
 
-    public int GetUpgrade2Level(int _weaponId)
-    {
-        foreach (var _unlockedWeapon in unlockedWeapons)
-        {
-            if (_unlockedWeapon.Id == _weaponId)
-            {
-                return _unlockedWeapon.Upgrade2;
-            }
-        }
-        throw new Exception("didnt find upgrade2 level for weapon: " + _weaponId);
-    }
 
     public List<Weapon> UnlockedWeapons
     {
@@ -201,7 +190,7 @@ public class PlayerData
 
     public void UnlockWeapon(int _weaponId)
     {
-        unlockedWeapons.Add(new Weapon() { Id = _weaponId, Upgrade1 = 0, Upgrade2 = 0 });
+        unlockedWeapons.Add(new Weapon() { Id = _weaponId, Upgrade1 = 0});
         UpdatedUnlockedGuns?.Invoke();
     }
 
@@ -216,10 +205,6 @@ public class PlayerData
         if (_upgrade == 1)
         {
             unlockedWeapons.Find(element => element.Id == _weaponId).Upgrade1++;
-        }
-        else
-        {
-            unlockedWeapons.Find(element => element.Id == _weaponId).Upgrade2++;
         }
         UpdatedUnlockedGuns?.Invoke();
     }

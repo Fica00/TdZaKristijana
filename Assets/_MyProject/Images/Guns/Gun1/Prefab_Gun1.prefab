@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9df8963fcc625547b6909a99181e66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 1f82dc0f4e8633445b0db63758d94c71, type: 2}
+  gun: {fileID: 11400000, guid: 8a08f45460ccf6a4391de524c66343f4, type: 2}
   bullet: {fileID: 1028206493973864929, guid: c2a1103be2ec174409d3b6424f32364b, type: 3}
   shootPoint: {fileID: 8289824259599001295}
   <HoldToFire>k__BackingField: 0

@@ -11,8 +11,9 @@ public class Shotgun : GunController
     private void Awake()
     {
         GunShots = gun.AmountOfBullets[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
+        
         spreed = gun.Spread;
-        AmountOfClips = gun.AmountOfClips[DataManager.Instance.PlayerData.GetUpgrade2Level(gun.Id)];
+        AmountOfClips = gun.AmountOfClips[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
 
         CurrentGunShotsAmount = GunShots;
     }
@@ -75,7 +76,6 @@ public class Shotgun : GunController
                     _bullet.GetComponent<Rigidbody2D>().velocity = flipped * gun.Bullet.Speed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
                 }
             }
-
         }
 
         cooldownCounter = gun.Cooldown[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)];
@@ -87,27 +87,20 @@ public class Shotgun : GunController
             Reload();
         }
        
-            
-        
     }
 
     protected override IEnumerator ReloadRoutine()
     {
         Reloading?.Invoke();
         yield return new WaitForSeconds(gun.ReloadSpeed[DataManager.Instance.PlayerData.GetUpgrade1Level(gun.Id)]);
+        AmountOfClips--;
         CurrentGunShotsAmount = GunShots;
         FinishedReloading?.Invoke();
     }
 
     private void FixedUpdate()
     {
-        if (cooldownCounter <= 0)
-        {
-            return;
-        }
-        else
-        {
+        if (!(cooldownCounter <= 0))
             cooldownCounter -= Time.deltaTime;
-        }
     }
 }

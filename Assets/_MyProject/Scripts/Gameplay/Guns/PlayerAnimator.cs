@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] Animator bodyAnimator;
-    [SerializeField] Animator armAnimator;
+   // [SerializeField] Animator armAnimator;
 
     private void OnEnable()
     {
@@ -28,25 +28,25 @@ public class PlayerAnimator : MonoBehaviour
     void FireAnimation()
     {
         bodyAnimator.Play("Attack");
-        armAnimator.Play("Attack");
+        //armAnimator.Play("Attack");
     }
 
     void ReloadAnimation()
     {
         bodyAnimator.Play("Ammo");
-        armAnimator.Play("Ammo");
+        //armAnimator.Play("Ammo");
     }
 
     void DieAnimation()
     {
         bodyAnimator.Play("Died");
-        armAnimator.Play("Died");
+        //armAnimator.Play("Died");
     }
 
     void IdleAnimation()
     {
         bodyAnimator.Play("Idle");
-        armAnimator.Play("Idle");
+        //armAnimator.Play("Idle");
     }
 
     void Reviwe()

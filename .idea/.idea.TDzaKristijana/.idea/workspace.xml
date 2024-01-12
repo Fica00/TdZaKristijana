@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9ce7acf8-5038-473a-a414-2f32baa07ed7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TDzaKristijana/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TDzaKristijana/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun1/Prefab_Gun1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun1/Prefab_Gun1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun2/Prefab_Gun2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun2/Prefab_Gun2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun3/Prefab_Gun3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Guns/Gun3/Prefab_Gun3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Images/Player/Animations/Alien/Idle Hat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Images/Player/Animations/Alien/Idle Hat.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Bazooka.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Bazooka.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Enemy/Devojka/Attack_Devojka.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Enemy/Devojka/Attack_Devojka.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Enemy/Devojka/Prefab_Devojka.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Enemy/Devojka/Prefab_Devojka.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/0_Pistol.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/1_Pump.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Kalas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Resources/Guns/2_Kalas.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Bow/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Bow/Bow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/BulletController.cs" afterDir="false" />
@@ -17,15 +24,22 @@
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/GunsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/MGK/MGK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/MGK/MGK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/PlayerAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/RPG/RPG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/RPG/RPG.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/Shotgun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelSelection/LevelSelectionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelSelection/LevelSelectionDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Managers/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/ShotgunBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Gameplay/Guns/Shotgun/ShotgunBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Shop/ShopUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Shop/ShopUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Shop/WeaponUpgrade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Shop/WeaponUpgrade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/Weapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d8d38b92d94a4ff8a91e61d39c6d19cd15d000/32/7e4846c1/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,17 +49,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Petar\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Petar\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Petar\\AppData\\Local\\Symbols\\src&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath D:\TdZaKristijana -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\TdZaKristijana" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\TdZaKristijana -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\TdZaKristijana" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Projects\TDzaKristijana -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -64,10 +105,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28400">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="28400" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -84,6 +125,8 @@
       <option name="presentableId" value="Default" />
       <updated>1694598472536</updated>
       <workItem from="1694598477682" duration="1563000" />
+      <workItem from="1704291265834" duration="8773000" />
+      <workItem from="1704311310041" duration="13136000" />
     </task>
     <servers />
   </component>

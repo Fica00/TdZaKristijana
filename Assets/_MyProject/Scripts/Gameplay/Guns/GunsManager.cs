@@ -163,10 +163,6 @@ public class GunsManager : MonoBehaviour
         {
             selectedGun.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
-        else
-        {
-            return;
-        }
 
     }
 }

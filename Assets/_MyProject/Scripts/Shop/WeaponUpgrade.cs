@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.Serialization;
 
 public class WeaponUpgrade : MonoBehaviour
 {
@@ -14,12 +15,10 @@ public class WeaponUpgrade : MonoBehaviour
     [SerializeField] Button unlockButton;
 
     [SerializeField] TextMeshProUGUI nameDisplay;
-    [SerializeField] Button upgrade1Button;
-    [SerializeField] Button upgrade2Button;
+    [SerializeField] private Button upgrade1Button;
     [SerializeField] TextMeshProUGUI upgrade1CostDisplay;
-    [SerializeField] TextMeshProUGUI upgrade2CostDisplay;
     [SerializeField] GameObject[] upgradeDisplays;
-    [SerializeField] Button equiptButotn;
+    [FormerlySerializedAs("equiptButotn")] [SerializeField] Button equiptButton;
 
     GunSO weapon;
     Weapon weaponData;
@@ -30,16 +29,14 @@ public class WeaponUpgrade : MonoBehaviour
     {
         unlockButton.onClick.AddListener(Unlock);
         upgrade1Button.onClick.AddListener(Upgrade1);
-        upgrade2Button.onClick.AddListener(Upgrade2);
-        equiptButotn.onClick.AddListener(TriggerEquipt);
+        equiptButton.onClick.AddListener(TriggerEquipt);
     }
 
     private void OnDisable()
     {
         unlockButton.onClick.AddListener(Unlock);
         upgrade1Button.onClick.RemoveListener(Upgrade1);
-        upgrade2Button.onClick.RemoveListener(Upgrade2);
-        equiptButotn.onClick.RemoveListener(TriggerEquipt);
+        equiptButton.onClick.RemoveListener(TriggerEquipt);
     }
 
     void Unlock()
@@ -107,33 +104,20 @@ public class WeaponUpgrade : MonoBehaviour
 
         weaponData = DataManager.Instance.PlayerData.UnlockedWeapons.Find(element => element.Id == _gun.Id);
 
-        if (weapon.Upgrade1Cost.Count == weaponData.Upgrade1)
+        if (weapon.UpgradeCost.Count == weaponData.Upgrade1)
         {
             upgrade1Button.interactable = false;
             upgrade1CostDisplay.text = "MAX";
         }
         else
         {
-            upgrade1Cost = weapon.Upgrade1Cost[weaponData.Upgrade1];
+            upgrade1Cost = weapon.UpgradeCost[weaponData.Upgrade1];
             upgrade1CostDisplay.text = upgrade1Cost.ToString();
         }
-        if (weapon.Upgrade2Cost.Count == weaponData.Upgrade2)
-        {
-            upgrade2Button.interactable = false;
-            upgrade2CostDisplay.text = "MAX";
-        }
-        else
-        {
-            upgrade2Cost = weapon.Upgrade2Cost[weaponData.Upgrade2];
-            upgrade2CostDisplay.text = upgrade2Cost.ToString();
-        }
 
+        float _currentUpgrade = weaponData.Upgrade1;
 
-        float _currentUpgrade = weaponData.Upgrade1 + weaponData.Upgrade2;
-        float _upgradeCounter = (_currentUpgrade + 0.5f) / 2;
-        _upgradeCounter = Mathf.Clamp(_upgradeCounter, 0, upgradeDisplays.Length);
-
-        for (int i = 0; i < _upgradeCounter; i++)
+        for (int i = 0; i < _currentUpgrade; i++)
         {
             upgradeDisplays[i].SetActive(true);
         }

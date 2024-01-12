@@ -21,12 +21,11 @@ public class ShotgunBullet : BulletController
             if (effect != null)
             {
                 Instantiate(effect).transform.position = transform.position;
-
             }
             Destroy(gameObject);
         }
 
-        if (collision.tag == "Boundries")
+        if (collision.CompareTag("Boundries"))
         {
             Destroy(gameObject);
         }
